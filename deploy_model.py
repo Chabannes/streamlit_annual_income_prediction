@@ -58,7 +58,7 @@ def main():
     st.markdown(html_temp, unsafe_allow_html=True)
 
     # following lines create boxes in which user can enter data required to make prediction
-    workclass = st.selectbox('Workclass', ('Self-emp-not-inc', 'Private', 'State-gov', 'Federal-gov', 'Local-gov', '?',
+    workclass = st.selectbox('Workclass', ('Self-emp-not-inc', 'Private', 'State-gov', 'Federal-gov', 'Local-gov', 'Not Telling',
                                            'Self-emp-inc', 'Without-pay', 'Never-worked'))
     education = st.selectbox('Education', ('Bachelors', 'HS-grad', '11th', 'Masters', '9th', 'Some-college', 'Assoc-acdm',
                                            'Assoc-voc', '7th-8th', 'Doctorate', 'Prof-school', '5th-6th', '10th',
@@ -68,12 +68,12 @@ def main():
     occupation = st.selectbox('Occupation', ('Exec-managerial', 'Handlers-cleaners', 'Prof-specialty',
                                                 'Other-service', 'Adm-clerical', 'Sales', 'Craft-repair',
                                                 'Transport-moving', 'Farming-fishing', 'Machine-op-inspct',
-                                                'Tech-support', '?', 'Protective-serv', 'Armed-Forces', 'Priv-house-serv'))
+                                                'Tech-support', 'Not Telling', 'Protective-serv', 'Armed-Forces', 'Priv-house-serv'))
     relationship = st.selectbox('Relationship', ('Husband', 'Not-in-family', 'Wife', 'Own-child',
                                                  'Unmarried', 'Other-relative'))
     race = st.selectbox('Race', ('White', 'Black', 'Asian-Pac-Islander', 'Amer-Indian-Eskimo', 'Other'))
     sex = st.selectbox('Gender', ('Male', 'Female'))
-    native_country = st.selectbox('Gender', ('United-States', 'Cuba', 'Jamaica', 'India', '?', 'Mexico', 'South',
+    native_country = st.selectbox('Gender', ('United-States', 'Cuba', 'Jamaica', 'India', 'Not Telling', 'Mexico', 'South',
                                              'Puerto-Rico', 'Honduras', 'England', 'Canada', 'Germany', 'Iran',
                                              'Philippines', 'Italy', 'Poland', 'Columbia', 'Cambodia', 'Thailand',
                                              'Ecuador', 'Laos', 'Taiwan', 'Haiti', 'Portugal', 'Dominican-Republic',
