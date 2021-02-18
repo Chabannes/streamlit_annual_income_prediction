@@ -24,8 +24,12 @@ df_train.columns = ['age', 'workclass', 'fnlwgt', 'education', 'education-num', 
 
 df_train['>50K'] = df_train['>50K'].map({'<=50K': 0, '<=50K.': 0, '>50K': 1, '>50K.': 1})
 
+df_train['workclass'][df_train['workclass'] == '?'] = 'Not Telling'
+df_train['occupation'][df_train['occupation'] == '?'] = 'Not Telling'
+
 X_train_cat = df_train[['workclass', 'education', 'marital-status', 'occupation', 'relationship', 'race', 'sex', 'native-country']].values
 X_train_num = df_train[['age', 'hours-per-week']].values
+
 
 workclass = np.unique(X_train_cat[:, 0])
 education = np.unique(X_train_cat[:, 1])
@@ -76,6 +80,8 @@ df_test.columns = ['age', 'workclass', 'fnlwgt', 'education', 'education-num', '
                     'race', 'sex', 'capital-gain', 'capital-loss', 'hours-per-week', 'native-country', '>50K']
 
 df_test['>50K'] = df_test['>50K'].map({'<=50K': 0, '<=50K.': 0, '>50K': 1, '>50K.': 1})
+df_test['workclass'][df_test['workclass'] == '?'] = 'Not Telling'
+df_test['occupation'][df_test['occupation'] == '?'] = 'Not Telling'
 
 X_test_cat = df_test[['workclass', 'education', 'marital-status', 'occupation', 'relationship', 'race', 'sex', 'native-country']].values
 X_test_num = df_test[['age', 'hours-per-week']].values
