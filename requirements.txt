@@ -1,5 +1,5 @@
 numpy==1.19.2
-pickle=4.0
+pickle==4.0
 h5py==2.10.0
 cython>=0.29.0
 pandas>=0.21.0
